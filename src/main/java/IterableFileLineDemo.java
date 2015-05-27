@@ -40,7 +40,15 @@ public class IterableFileLineDemo extends File implements Iterable<String> {
         }
     }
 
-    public static void main(String[] args){
-        
+    public static void main(String[] args) {
+        // Get the file relative to the project
+        String filename = IterableFileLineDemo.class.getClassLoader().getResource("file.txt").getFile();
+        // Now we iterate over the file.
+        // Note, that this demo shows that java DOES in fact use an interator in a for-each loop
+        // Note, this demo also shows a valid use case for using the hasnext method (we close the file
+        // gracefully)
+        for (String fileline : new IterableFileLineDemo(filename)) {
+            System.out.println(fileline);
+        }
     }
 }
