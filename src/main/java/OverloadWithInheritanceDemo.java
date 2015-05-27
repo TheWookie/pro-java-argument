@@ -22,11 +22,11 @@ public class OverloadWithInheritanceDemo {
     }
 
     public static void TakeObj(FooBar fooBar) {
-        fooBar.aMethod();
+        System.out.println("TakeObj(FooBar) was called.");
     }
 
     public static void TakeObj(FooBaz fooBaz) {
-        fooBaz.aMethod();
+        System.out.println("TakeObj(FooBaz) was called.");
         fooBaz.uniqueMethod();
     }
 
@@ -49,10 +49,11 @@ public class OverloadWithInheritanceDemo {
          * If one were to have an abstract class "Employee" and two subclasses named
          * "HourlyEmployee" and "SalariedEmployee", should we write a distinct
          * consumer for each individual possibility? What about future implementations
-         * such as "CommissionedEmployee"?
+         * such as "CommissionedEmployee" or other things that were not imagined at
+         * the original time of implementation?
          *
          * Writing an individual method for each potentiality of an object is impractical
-         * and self defeating. Just let polymorphism do its thing, that's the point.
+         * and self defeating. Just let polymorphism do its thing, that's the point OOP.
          */
         List<FooBar> fooBarList = PseudoListInitializer.AsArrayList(new FooBar(), new FooBar(), new FooBaz());
         for (FooBar fooBar : fooBarList) {
