@@ -6,8 +6,8 @@ import java.util.Scanner;
 /**
  * Created by paulbaker on 5/27/15.
  */
-public class IterableFileLineDemo extends File implements Iterable<String> {
-    public IterableFileLineDemo(String pathname) {
+public class IterableFile extends File implements Iterable<String> {
+    public IterableFile(String pathname) {
         super(pathname);
     }
 
@@ -15,6 +15,9 @@ public class IterableFileLineDemo extends File implements Iterable<String> {
         return new FileLineIterator(this);
     }
 
+    /**
+     * There is a little boilerplate, but this isn't THAT bad
+     */
     private class FileLineIterator implements Iterator<String> {
 
         final private Scanner scanner;
@@ -42,12 +45,12 @@ public class IterableFileLineDemo extends File implements Iterable<String> {
 
     public static void main(String[] args) {
         // Get the file relative to the project
-        String filename = IterableFileLineDemo.class.getClassLoader().getResource("file.txt").getFile();
+        String filename = IterableFile.class.getClassLoader().getResource("file.txt").getFile();
         // Now we iterate over the file.
         // Note, that this demo shows that java DOES in fact use an interator in a for-each loop
         // Note, this demo also shows a valid use case for using the hasnext method (we close the file
         // gracefully)
-        for (String fileline : new IterableFileLineDemo(filename)) {
+        for (String fileline : new IterableFile(filename)) {
             System.out.println(fileline);
         }
     }
