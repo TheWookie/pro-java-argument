@@ -4,7 +4,7 @@
 public class AutoCastDemo {
 
     public static void takeLong(long number) {
-        System.out.println(number);
+        System.out.println(number + " was passed... This works just fine?");
     }
 
     public static void main(String[] args) {
