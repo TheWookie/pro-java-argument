@@ -26,6 +26,10 @@ public class Globals {
         Most people don't use globals or singletons (or shouldn't), which means that
         just because the language has it as part of it's syntax and specification; it
         isn't necessarily a good thing.
+
+        Sources:
+        http://stackoverflow.com/a/485020/1478636
+        http://programmers.stackexchange.com/a/148109
          */
     }
 }
