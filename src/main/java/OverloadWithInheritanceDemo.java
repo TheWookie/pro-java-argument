@@ -10,17 +10,20 @@ public class OverloadWithInheritanceDemo {
 
     }
 
-    public static void TakeObj(FooBar fooBar){
+    public static void TakeObj(FooBar fooBar) {
         System.out.println("FooBar was taken");
     }
 
-    public static void TakeObj(FooBaz fooBaz){
+    public static void TakeObj(FooBaz fooBaz) {
         System.out.println("FooBaz was taken");
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
+        /** In order to force java to use an overloaded method for a subclass, we must
+         * type cast that item back to the subclass.
+         */
         FooBar foobar = new FooBaz();
         TakeObj(foobar);
-        TakeObj((FooBaz)foobar);
+        TakeObj((FooBaz) foobar);
     }
 }
