@@ -15,7 +15,8 @@ public class Globals {
         /*
         While that was something of a joke, there is some seriousness to this point.
         Global variables are a problem. They hold a state that can be modified by anyone.
-        This is a problem in object oriented programming, hence why we use encapsulation.
+        This is a problem in object oriented programming because state can no longer be
+        controlled (it is modifiable by anyone at any time), hence why we use encapsulation.
 
         Can these things be replaced with singletons? Yes. Yes they can, but even though they
         can, doesn't mean anyone uses the singleton anti-pattern very much anymore. Spring.IO
