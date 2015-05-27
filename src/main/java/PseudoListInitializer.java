@@ -31,7 +31,8 @@ public class PseudoListInitializer {
         While we're being honest, even if it were HORRIBLY inefficient to create list literals people would
         still do it because it is truly just syntactic sugar we're after.
          */
-        List<String> stringArrayList = AsArrayList("Hello", "My", "Name", "Is", "Sangye Dorje Konchok");
-        List<String> stringLinkedList = AsLinkedList("It", "Is", "A", "Tibetan", "Name");
+        List<String> stringArrayList = AsArrayList("It was", "the one", "armed", "man!");
+        List<String> stringLinkedList = AsLinkedList("Do you", "remember", "the", "fugitive", "?");
+        List<Integer> integerArrayList = AsArrayList(1, 2, 3, 4, 5, 6, 7, 8, 9);
     }
 }
