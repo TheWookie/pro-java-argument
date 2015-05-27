@@ -28,8 +28,8 @@ public class PseudoListInitializer {
         We need to be honest with ourselves. This overhead is going to be fairly negligible and in either case
         the time for either a true literal OR our fake literal is going to computationally be O(N) regardless.
 
-        Let's be honest, even if it were HORRIBLY inefficient to create list literals people would still do it
-        because it is truly just syntactic sugar we're after.
+        While we're being honest, even if it were HORRIBLY inefficient to create list literals people would
+        still do it because it is truly just syntactic sugar we're after.
          */
         List<String> stringArrayList = AsArrayList("Hello", "My", "Name", "Is", "Sangye Dorje Konchok");
         List<String> stringLinkedList = AsLinkedList("It", "Is", "A", "Tibetan", "Name");
