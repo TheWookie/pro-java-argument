@@ -51,8 +51,8 @@ public class IterableFile extends File implements Iterable<String> {
         // Get the file relative to the project
         String filename = IterableFile.class.getClassLoader().getResource("file.txt").getFile();
         // Now we iterate over the file.
-        // Note, that this demo shows that java DOES in fact use an interator in a for-each loop
-        // Note, this demo also shows a valid use case for using the hasnext method (we close the file
+        // Note, that this demo shows that java DOES in fact use an iterator in a for-each loop
+        // Note, this demo also shows a valid use case for using the hashNext method (we close the file
         // gracefully and silently at the same time)
         for (String fileline : new IterableFile(filename)) {
             System.out.println(fileline);
